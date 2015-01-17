@@ -28,18 +28,21 @@ public class HelloWorld extends Activity {
     public void trocarTexto(View view) {
         String novoTexto = input.getText().toString();
         texto.setText(novoTexto);
-
+        /*
         try {
             Thread.sleep(2000);
+        */
+            //activity Explicita
+            // Intent intent = new Intent(this, MainActivity.class);
 
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent("ABRIR_MAIN_ACTIVITY");
             intent.putExtra("nome", novoTexto);
 
             startActivity(intent);
 
-
+        /*
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }
